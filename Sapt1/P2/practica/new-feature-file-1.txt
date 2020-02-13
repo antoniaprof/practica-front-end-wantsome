@@ -1,0 +1,1 @@
+Git is a Distributed Version Control tool that is used to store different versions of a file in a remote or local repository. It is used to track changes in the source code. It allows multiple developers to work together. A VCS allows you to keep every change you make in the code repository.
