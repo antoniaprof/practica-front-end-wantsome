@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+    <form>
+        <h1>Travel reservation form</h1>
+        <h2>*denotes mandatory</h2>
+
+        <label for="name">Full name*:</label><br>
+        <input type='text' name='name' placeholder='FirstName LastName' required><br>
+
+        <label for="email">Email adress*:</label><br>
+        <input type="email" name='email' placeholder='EMAIL_ADRESS' required><br>
+
+        <label for='tour'>Select Tour Package*:</label><br>
+        <select name='tour' required>
+            <option name="Goa">Goa</option><br>
+            <option name='SGoa'>SGoa</option><br>
+            <option name='WGoa'>WGoa</option><br>
+        </select><br>
+
+        <label for='date'>Arrival date*:</label><br>
+        <input type='date' name='date' required><br>
+
+        <label for='number'>Number of persons*:</label><br>
+        <input type='number' name='number' placeholder='UNKNOWN_TYPE' required><br>
+
+        <p>What would you want to avail?* </p>
+        <label for='option1'>Boarding</label>
+        <input type='checkbox' name='option1' value='Boarding'><br>
+        <label for='option2'>Fooding</label>
+        <input type='checkbox' name='option2' value='Fooding'><br>
+        <label for='option3'>Sight seeing</label>
+        <input type='checkbox' name='option3' value='SightSeeing'> <br>
+
+        <label for='text'>Discount Coupon code:</label><br>
+        <input type='text' placeholder='UNKNOWN_TYPE'><br>
+
+        <label for='agreement'>Terms and conditions*</label><br>
+        <input type='radio' name='agreement' value='agree' checked required>
+        <label for='agreement'>I agree</label>
+        <input type='radio' name='agreement' value='disagree'>
+        <label for='agreement'>I disagree</label><br>
+
+        <input type='submit' value='Complete reservation'>
+    </form>
+    </body>
+</html>
