@@ -1,0 +1,49 @@
+p {
+    color:red;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.main {
+    font-family: Arial;
+}
+
+#title {
+    text-decoration: underline;
+}
+
+a[href] {
+    text-decoration: none;
+}
+
+a[href="https://wantsome.ro"] {
+    color: green;
+}
+
+a[title="External link"] {
+    font-style: italic;
+}
+
+a:hover {
+    color: red;
+}
+
+footer a:last-child:focus {
+    text-decoration: underline;
+}
+
+footer::after {
+    content: 'Continut adaugat din CSS';
+    background-color: yellow;
+}
+
+p::first-letter {
+    font-size: 48px;
+}
+/* putem scrie mai usor*/
+
+p, a:hover {
+    color: red;
+}
