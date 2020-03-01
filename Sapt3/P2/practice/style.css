@@ -1,0 +1,26 @@
+h1 {
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+    background: #6A6;
+    padding: 10px;
+}
+
+ul {
+    border-width: 15px;
+    background: #DE1E7E;
+}
+
+.box {
+    width: 500px;
+    height: 300px;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: black;
+}
+
+a {
+    border-bottom: dashed;
+    Border-bottom-color: blue;
+    background: #a1a1a1;
+}
