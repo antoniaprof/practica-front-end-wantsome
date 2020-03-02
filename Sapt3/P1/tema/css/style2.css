@@ -1,0 +1,31 @@
+h1, h2 {
+    text-decoration: underline;
+    text-decoration-color: #e69a8dff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e69a8dff;
+}
+
+form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    text-align: center;
+    
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e69a8dff;
+    background-color: #5f4b8bff;
+}
+
+h1:hover {
+    color: yellowgreen;
+}
+
+
+p {
+    border-style: none;
+    margin: 0px;
+}

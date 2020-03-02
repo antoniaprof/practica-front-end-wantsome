@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+    
+    <head>
+        <title>Form1</title>
+        <link rel="stylesheet" href="css/style1.css">
+
+    </head>
+    <body>
+        <div id='background'></div>
+        <form>
+            <div class='div'>
+            <label for="name">First name:</label><br>
+            <input id='name' type="text" name="name" value='Popescu' required><br>
+            </div>
+
+            <div class='div'>
+            <label for="surname">Last name:</label><br>
+            <input id='surname' type="text" name="surname" value='Ion' required><br>
+            </div>
+
+            <div class='div'>
+                <p>Sex:</p>
+                <label for="female">Female</label>
+                <input id ='female' type="radio" name="gender" value="female"><br>
+                <label for="male">Male</label>
+                <input id='male' type="radio" name="gender" value="male"><br>
+            </div>
+
+            <div class='div'>
+                <label for="age">Age:</label><br>
+                <input id= 'age' type="number" min="18" max="85" name="age"><br>
+            </div>
+
+            <div class='div'>
+                <label for="country">Country:</label><br>
+                <select id='country' name="country">
+                    <option value='Romania'>Romania</option>
+                    <option value="Anglia">Anglia</option>
+                    <option value="Danemarca">Danemarca</option>
+                </select><br>
+            </div>
+
+            <div class='div'>
+                <label for="city">City:</label><br>
+                <select id='city' name="city" >
+                    <option value="Iasi">Iasi</option>
+                    <option value="Bucuresti">Bucuresti</option>
+                    <option value="Timisoara">Timisoara</option>
+                </select><br>
+            </div>
+
+            <div class='div'> 
+                <label for="adress">Adress:</label><br>
+                <textarea id='adress' name="adress"></textarea><br>
+            </div>
+
+            <div class='div'>
+                <label for='postcode'>Post code:</label><br>
+                <input id='postcode' type="text" name="postcode" value='ex123456'><br>
+            </div>
+
+            <div class='div'>
+                <label for='email'>E-mail:</label><br>
+                <input id='email' type="email" name="email" required><br>
+            </div>
+
+            <div class='div'>
+                <label for='message'>Message:</label><br>
+                <textarea id='message' name='message'>Write your message here!</textarea><br>
+            </div>
+
+            <div class='div'>
+                <label for='file'>Attach CV:</label><br>
+                <input id='file' type='file' name='file'> <br><br>
+            </div>
+
+            <div>
+            <input type='submit' value='Send'>
+            <input type='reset'>
+            </div>
+        </form>
+    </body>
+</html>

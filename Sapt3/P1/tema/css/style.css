@@ -1,0 +1,60 @@
+li:nth-of-type(2n) {
+    color: green;
+}
+
+li:nth-of-type(3) {
+    background: lightblue;
+}
+
+li:first-of-type {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: green;
+}
+
+li:last-of-type {
+    border-bottom-style: dotted;
+    border-bottom-width: 5px;
+    border-bottom-color: blue;
+}
+
+li:nth-of-type(3)>a { 
+    color: red;
+}
+
+li:nth-of-type(5)>a  { 
+    color: red;
+}
+
+li:nth-of-type(5)>a:hover {
+    color: grey;
+}
+
+li:nth-of-type(2), li:nth-of-type(5) {
+    list-style-type: none;
+}
+
+input[type='text']:hover {
+    color: grey;
+}
+
+input[placeholder='first name'] {
+    color: green;
+}
+
+input[placeholder='last name'] {
+    color: blue;
+}
+
+input[type='password'] {
+  color: transparent;
+}
+
+input[type="email"]::selection {
+    background: yellow;
+    color: pink;
+}
+
+input[type="submit"]:hover {
+    color: red;
+}
