@@ -1,0 +1,23 @@
+div.one {
+    width: 100px;
+    height: 100px;
+    background: red;
+  transition: 2s width;
+  
+}
+
+div.two {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    transition: 2s width;
+    transition-delay: 2s
+}
+
+div#main:hover .one  {
+    width: 300px;
+}
+
+div#main:hover .two  {
+    width: 300px;
+}

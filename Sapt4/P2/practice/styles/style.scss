@@ -1,0 +1,13 @@
+@import 'mixins';
+@import 'operators';
+@import 'variables';
+@import 'nesting';
+
+body {
+    background: $otherColor;
+}
+
+.grid-item {
+    @include pinkBorder;
+    background: $mainColor;
+}
