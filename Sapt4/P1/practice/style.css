@@ -1,7 +1,9 @@
-.container {
+.flexibleRow {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; 
+    flex: 1;
+    
 }
 
 header {
@@ -13,25 +15,20 @@ header {
 
 #left {
    background: blue;
-   width: 30%;
+   width: 200px;
    height: 200px; 
-   
-
 }
 
 #right {
     background: green;
-    width: 30%;
-    height: 200px;
- 
-   
+    width: 200px;
+    height: 200px;   
 }
 
 #middle {
     background: pink;
-    width:40%;
     height: 200px;
- 
+    flex: 1;
 }
 
 footer {
@@ -40,3 +37,10 @@ footer {
     background: orange;
     align-self: flex-end;
 }
+/*
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+     margin: 0;
+ }
