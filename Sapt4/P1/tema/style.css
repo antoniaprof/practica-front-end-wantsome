@@ -1,0 +1,25 @@
+.grid-container {
+    display: grid;
+    grid-row-gap: 10px;
+    background: black;
+}
+.grid-item{
+    display: block;
+    width: 100%;
+    height: 70px;
+    background: white;
+    text-align: center;
+}
+
+#item-c {
+  background: red;
+}
+
+#item-d {
+    background: blue;
+  }
+
+  #item-g {
+    background: yellow;
+  }
+  
