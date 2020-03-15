@@ -9,6 +9,10 @@ header, footer {
   font-size: 80px;
 }
 
+#introPhoto {
+  display: none;
+}
+
 .navButton {
   width: 10%;
   height: 10%;
@@ -85,7 +89,7 @@ p {
           justify-content: flex-start;
 }
 
-#symbol {
+.symbol {
   width: 150px;
   height: 150px;
 }
@@ -132,7 +136,7 @@ form label::after {
 #submitButton {
   color: white;
   background-color: #880606;
-  width: 400px;
+  width: 40%;
 }
 
 body::after {
@@ -185,7 +189,7 @@ body::after {
     font-size: 60px;
     padding: 100px 20px;
   }
-  #symbol {
+  .symbol {
     width: 70px;
     height: 70px;
   }
@@ -200,6 +204,227 @@ body::after {
     background-image: url("https://wallpaperaccess.com/full/754629.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: #ce3535;
+  }
+  .hidden {
+    display: inline-block;
+  }
+  #logo {
+    width: 3%;
+    height: 3%;
+  }
+  #logo:hover {
+    width: 20%;
+    height: 20%;
+  }
+  #intro {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  #introPhoto {
+    width: 300px;
+    height: 300px;
+  }
+  #introSection {
+    width: 300px;
+    height: 200px;
+    padding: 0px;
+    text-align: left;
+  }
+  .navButton {
+    width: 2%;
+    height: 2%;
+    padding: 0px 3px;
+  }
+  .navButton:hover {
+    width: 5%;
+    height: 5%;
+  }
+  #introPhoto {
+    display: inline-block;
+  }
+  h1 {
+    font-size: 40px;
+    margin: 0px;
+  }
+  h1:hover {
+    color: #680909;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: lighter;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  h4 {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  p {
+    font-size: 12px;
+  }
+  .flexRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .symbol {
+    width: 30px;
+    height: 30px;
+  }
+  .specialText {
+    background-color: #ce3535;
+    font-size: 30px;
+    padding: 50px 20px;
+  }
+  section {
+    padding: 40px;
+  }
+  .phoneImage {
+    width: 300px;
+    height: 400px;
+  }
+  .gridType1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 5% 30% 30%;
+        grid-template-columns: 5% 30% 30%;
+    -ms-grid-rows: 20% 50% 30%;
+        grid-template-rows: 20% 50% 30%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gridType1 .row1col1 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    place-self: end right;
+    padding: 15px;
+    margin: 0px;
+  }
+  .gridType1 .row1col2 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    place-self: end left;
+    padding: 15px;
+    margin: 0px;
+  }
+  .gridType1 .row2col2 {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    text-align: left;
+    padding: 5px 100px 5px 5px;
+  }
+  .gridType1 .row1col3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / span 3;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  .gridType2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 5% 30%;
+        grid-template-columns: 30% 5% 30%;
+    -ms-grid-rows: 20% 60%;
+        grid-template-rows: 20% 60%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gridType2 .rowAcolB {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    place-self: end right;
+    padding: 15px;
+  }
+  .gridType2 .rowAcolC {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    /* place-self: center start; */
+    place-self: end left;
+    padding: 15px;
+    margin: 0px;
+  }
+  .gridType2 .rowBcolC {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-column-align: end start;
+        justify-self: end start;
+    text-align: left;
+    padding: 5px 100px 5px 5px;
+  }
+  .gridType2 .rowAcolA {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+    place-self: start center;
+  }
+  footer {
+    padding: 70px;
+  }
+  form {
+    font-size: 20px;
+    text-align: left;
+    padding: 30px;
+    padding: 20px 400px;
+  }
+  form input {
+    height: 30px;
+    width: 80%;
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 5px;
+  }
+  form textarea {
+    height: 50px;
+    width: 80%;
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 5px;
+  }
+  form label {
+    margin: 20px;
+  }
+  form label::after {
+    content: '*';
+  }
+  body::after {
+    content: "© TinyLove 2013";
+    color: #680909;
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

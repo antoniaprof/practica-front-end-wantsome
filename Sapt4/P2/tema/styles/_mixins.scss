@@ -36,40 +36,53 @@
 }
 
 @mixin formStyle {
-font-size: 70px;
-text-align: left;
-padding: 60px;
+    font-size: 70px;
+    text-align: left;
+    padding: 60px;
 
-input {
-    height: 100px;
-    width: 80%;
-    font-size:80px;
-    margin: 25px;
-    border-radius: 20px;
-}
+    input {
+        height: 100px;
+        width: 80%;
+        font-size:80px;
+        margin: 25px;
+        border-radius: 20px;
+    }
 
-textarea {
-    height: 200px;
-    width: 80%;
-    font-size:100px;
-    margin: 25px;
-    border-radius: 20px;
-}
+    textarea {
+        height: 200px;
+        width: 80%;
+        font-size:100px;
+        margin: 25px;
+        border-radius: 20px;
+    }
 
-label {
-    margin: 50px;
-}
+    label {
+        margin: 50px;
+    }
 
-label::after {
-    content: '*';
-}
+    label::after {
+        content: '*';
+    }
 }
 
 @mixin submitButton {
     color: $textColorWhite;
     background-color: $darkRedBackground;
-    width: 400px;
+    width: 40%;
 }
+
+@mixin afterBody {
+    content: "© TinyLove 2013";
+    color: #680909;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    font-size: 40px;
+}
+
+
+
+
 
 @mixin tabletSpecialText {
     background-color: $redBackground;
@@ -97,3 +110,164 @@ label::after {
     height: 5%;
     padding: 10px;
 }
+
+
+
+
+@mixin desktopLogo {
+    width: 3%;
+    height: 3%;
+}
+
+@mixin desktopNavButton {
+    width: 2%;
+    height: 2%;
+    padding: 0px 3px;
+}
+  
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin desktopSymbol {
+    width: 30px;
+    height:30px;
+}
+
+@mixin desktopSpecialText {
+    background-color: $redBackground;
+    font-size: 30px;
+    padding: 50px 20px;
+}
+
+@mixin desktopBox {
+    padding: 40px;
+}
+
+@mixin desktopPhoneImage {
+    width: 300px;;
+    height: 400px;
+}
+
+@mixin gridType1 {
+    display: grid;
+    grid-template-columns: 5% 30% 30%;
+    grid-template-rows: 20% 50% 30%;
+    justify-content: center;
+
+    .row1col1 {
+        grid-row: 1;
+        grid-column: 1;
+        place-self: end right;
+        padding: 15px;
+        margin: 0px;
+        
+    } 
+
+    .row1col2 {
+        grid-row: 1;
+        grid-column: 2; 
+        place-self: end left;
+        padding: 15px;
+        margin: 0px;
+    }
+
+    .row2col2 {
+        grid-row: 2;
+        grid-column: 2;
+        justify-self: start;
+        text-align: left;
+        padding: 5px 100px 5px 5px;
+    }
+
+    .row1col3 {
+        grid-row: 1 / span 3;
+        grid-column: 3;
+    }
+}
+
+
+@mixin gridType2 {
+    display: grid;
+    grid-template-columns: 30% 5% 30%;
+    grid-template-rows: 20% 60%; 
+    justify-content: center;
+
+
+    .rowAcolB {
+        grid-row: 1;
+        grid-column: 2;
+        place-self: end right;
+        padding: 15px;
+    }
+    
+    .rowAcolC {
+        grid-row: 1;
+        grid-column: 3; 
+        /* place-self: center start; */
+
+        place-self: end left;
+        padding: 15px;
+        margin: 0px;
+    }
+    
+    .rowBcolC {
+        grid-row: 2;
+        grid-column: 3;
+        justify-self: end start;
+        text-align: left;
+        padding: 5px 100px 5px 5px;
+
+    }
+    
+    
+    .rowAcolA {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+        place-self: start center;
+    }
+}
+
+@mixin desktopFormStyle {
+    font-size: 20px;
+    text-align: left;
+    padding: 30px;
+    
+
+    input {
+        height: 30px;
+        width: 80%;
+        font-size:20px;
+        margin: 15px;
+        border-radius: 5px;
+    }
+
+    textarea {
+        height: 50px;
+        width: 80%;
+        font-size:20px;
+        margin: 15px;
+        border-radius: 5px;
+    }
+
+    label {
+        margin: 20px;
+    }
+
+    label::after {
+        content: '*';
+    }
+}
+
+@mixin desktopAfterBody {
+    content: "© TinyLove 2013";
+    color: #680909;
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+}
+    
