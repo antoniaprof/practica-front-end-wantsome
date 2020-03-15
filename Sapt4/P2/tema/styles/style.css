@@ -58,11 +58,11 @@ p {
 }
 
 .lightGrey {
-  background-color: #686262;
+  background-color: #3d3b3b;
 }
 
 .darkGrey {
-  background-color: #353232;
+  background-color: #221b1b;
 }
 
 .blackTextsection {
@@ -218,6 +218,12 @@ body::after {
   #logo:hover {
     width: 20%;
     height: 20%;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, transform 2s;
+    transition: width 2s, height 2s, transform 2s, -webkit-transform 2s;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   #intro {
     text-align: center;
@@ -227,6 +233,10 @@ body::after {
   #introPhoto {
     width: 300px;
     height: 300px;
+  }
+  #introPhoto:hover {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
   #introSection {
     width: 300px;
