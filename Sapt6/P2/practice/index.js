@@ -1,5 +1,5 @@
 //daca firstP e mai mare - afiseaza firstP e mai mare
-//daca secondP e mai mic - afiseaza secondP e mai mic*/
+//daca secondP e mai mic - afiseaza secondP e mai mic
 
 
 function greatestNrBetween(firstP, secondP) {
@@ -22,7 +22,7 @@ var helloWorldInLang = function (lang) {
         console.log('Hola Mundo!')
     }
     else {
-        console.log('en');
+        console.log(helloWorldInLang('en'));
     }
 }
 console.log(helloWorldInLang(en));
@@ -42,7 +42,8 @@ var helloWorld = function (lang) {
             console.log('Hello World!');
 
     }
-}
+};
+helloWorld('es');
 
 function pluralizeWord(number, name) {
     switch (true) {
@@ -68,21 +69,19 @@ pluralizeWord(2, 'dog');
 function numbers(points) {
     if (points > 90) {
         console.log('AA');
-    }
-    else if (points > 80 && points < 90) {
+    } else if (points > 80 && points < 90) {
         console.log('AB');
     } else if (points > 70 && points < 80) {
         console.log('BB');
     } else if (points > 60 && points < 70) {
         console.log('BC');
-    }
-    else if (points > 50 && points < 60) {
+    } else if (points > 50 && points < 60) {
         console.log('CC');
     } else if (points > 40 && points < 50) {
         console.log('CD');
     } else if (points > 30 && points < 40) {
         console.log('DD');
-    } else (points <= 30) {
+    } else {
         console.log('FF');
     }
 }
