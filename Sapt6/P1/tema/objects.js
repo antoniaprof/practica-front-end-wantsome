@@ -41,7 +41,7 @@ var lowerCaseTableValues = stringTableValues.toLowerCase();
 console.log(lowerCaseTableValues);
 
 // vreau la final sa ma rezultatul un singur string care sa contina o fraza de genul "proprietatea1 proprietatea2 proprietatea3 proprietatea4 reprezinta ceva"
-console.log(stringTableValues + ' are a table properties');
+console.log(stringTableKeys + ' are a table properties');
 
 //Ex3
 // Creati un obiect  cu 3 proprietati si una dintre ele sa reprezinte o  metoda
