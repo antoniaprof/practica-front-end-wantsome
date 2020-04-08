@@ -7,7 +7,7 @@ const myFunction = (number1, number2) => {
   }
   return number1 + number2;
 }
-console.log(myFunction(2, 4))
+console.log(myFunction(2, 4));
 
 //Ex2
 //Vreau sa am o functie care sa returneze true daca ambele numere sunt egale cu 30 sau daca suma lor este egala cu 30
@@ -17,7 +17,7 @@ console.log(myFunction(2, 4))
 
 
 const testFunction = (number1, number2) => number1 === 30 && number2 === 30 || number1 + number2 === 30;
-console.log(testFunction(20, 5))
+console.log(testFunction(20, 5));
 
 
 
@@ -27,14 +27,14 @@ console.log(testFunction(20, 5))
 //checkString('isEasy') - JSisEasy
 //checkString(null) - JS
 
-const checkString = (text) => {
+const checkString = text => {
   if (text.slice(0, 2) === 'JS') {
     return text;
   }
 
   return `JS ${text}`;
 }
-console.log(checkString('is awesome'))
+console.log(checkString('is awesome'));
 
 //Ex4
 //Scrieti o functie care sa scoata literele/cifrele duplicate dintr-un string/number
@@ -49,13 +49,13 @@ const removeDuplicates = param => {
   }
   return noDuplicates;
 }
-console.log(removeDuplicates('njnjlnnnnkklnuigyggggjvhvtuvgvghvgjnkkk'))
+console.log(removeDuplicates('njnjlnnnnkklnuigyggggjvhvtuvgvghvgjnkkk'));
 
 //Ex5
 // Gasiti cel mai lung string intr-o fraza
 //findLongestString('Wantsome is Awsomeeee today') - output 'Awsomeeee'
 
-const findLongestString = (string) => {
+const findLongestString = string => {
   let stringToArray = string.split(' ');
   let longestWord = '';
   for (i = 0; i < stringToArray.length; i++) {
@@ -65,7 +65,7 @@ const findLongestString = (string) => {
   }
   return longestWord;
 }
-console.log(findLongestString('Wantsomeeeeeeeeee is Awsomeeee today'))
+console.log(findLongestString('Wantsomeeeeeeeeee is Awsomeeee today'));
 
 //Ex6
 //Scrieti o functie care sa aiba output-ul asta
@@ -85,17 +85,17 @@ const hostFn = () => {
   return stars;
 }
 let fn = hostFn();
-console.log(fn())
-console.log(fn())
-console.log(fn())
-console.log(fn())
-console.log(fn())
-console.log(fn())
-console.log(fn())
+console.log(fn());
+console.log(fn());
+console.log(fn());
+console.log(fn());
+console.log(fn());
+console.log(fn());
+
 
 //ex7
-let negativeNumbers = [];
-const extractNegativeNumbers = (numbers) => {
+const extractNegativeNumbers = numbers => {
+  let negativeNumbers = [];
   for (i = 0; i < numbers.length; i++) {
     if (numbers[i] < 0) {
       negativeNumbers.push(numbers[i]);
@@ -103,7 +103,7 @@ const extractNegativeNumbers = (numbers) => {
   }
   return negativeNumbers;
 }
-console.log(extractNegativeNumbers([1, 2, -5, 4, -6, 0, -3, -5, -100]))
+console.log(extractNegativeNumbers([1, 2, -5, 4, -6, 0, -3, -5, -100]));
 
 //ex8
 //Avem o functie cu 2 numere si un operator, vrem sa obtinem rezultatul in functie de operator - "add", "substract", "multiply", "divide"
@@ -113,18 +113,18 @@ console.log(extractNegativeNumbers([1, 2, -5, 4, -6, 0, -3, -5, -100]))
 const calculate = (number1, number2, operation) => {
   let result = 'Try an operation'
   if (operation === 'add') {
-    result = number1 + number2
+    result = number1 + number2;
   } else if (operation === 'substract') {
-    result = number1 - number2
+    result = number1 - number2;
   } else if (operation === 'multiply') {
-    result = number1 * number2
+    result = number1 * number2;
   } else if (operation === 'divide') {
-    result = number1 / number2
+    result = number1 / number2;
   }
-  console.log(result);
+  return result;
 }
-calculate(10, 8, "substract")
-calculate(2, 50, "multiply")
+console.log(calculate(10, 8, "substract"));
+console.log(calculate(2, 50, "multiply"));
 
 //Ex9
 // Vreau sa am o functie care sa verifice daca numarul dat este divizibl cu 3, 5 sau ambele si sa printeze "THREE", "FIVE", "BOTH" iar daca nu este cu niciunul sa returneze numarul
@@ -142,7 +142,7 @@ const isDiv = number => {
   }
   return number;
 }
-console.log(isDiv(9))
+console.log(isDiv(9));
 
 //Master exercises
 //Ex9 
@@ -150,13 +150,13 @@ console.log(isDiv(9))
 // Azi este : Luni. 
 // Ora este : 20 PM : 30 : 38
 
-let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-let date = new Date();
-let day = date.getDay();
-let hour = date.getHours();
-let minute = date.getMinutes();
-let second = date.getSeconds();
 const printDate = () => {
+  let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  let date = new Date();
+  let day = date.getDay();
+  let hour = date.getHours();
+  let minute = date.getMinutes();
+  let second = date.getSeconds();
   for (i = 0; i < days.length; i++) {
     if (day === i) {
       if (hour <= 12) {
@@ -175,7 +175,7 @@ console.log(printDate());
 // validPin("z23f") => false
 
 const validPin = pin => {
-  if (pin.length !== 4) {
+  if (pin.length !== 4 && pin.length !== 6) {
     return false;
   }
   for (i = 0; i < pin.length; i++) {
@@ -185,16 +185,16 @@ const validPin = pin => {
   }
   return true;
 }
-console.log(validPin('1234f'))
+console.log(validPin('1ffv78'));
 
 //ex11 
 //Folosind regex vreau sa scot toate vocalele dintr-un string
 // removeVowels("Hey I am developer") => "Hy m dvlpr"
 
-const removeVowels = (string) => {
+const removeVowels = string => {
   return string.replace(/[a,e,i,o,u]/ig, '');
 }
-console.log(removeVowels("Hey I am a developer"))
+console.log(removeVowels("Hey I am a developer"));
 
 //ex12
 //Vreau sa am o functie care sa verifice daca un numar este patrat
@@ -202,13 +202,13 @@ console.log(removeVowels("Hey I am a developer"))
 // isSquareNumber(25) => true
 // isSquareNumber(3) => false
 
-const isSquareNumber = (number) => {
+const isSquareNumber = number => {
   if (Math.sqrt(number) % 1 == 0) {
     return true;
   }
   return false;
 }
-console.log(isSquareNumber(25))
+console.log(isSquareNumber(25));
 
 //ex13
 // Vreau sa am o functie care sa verifice daca un cuvant este o anagrama- daca toate literele din primul string se regasesc in al doilea
@@ -216,10 +216,9 @@ console.log(isSquareNumber(25))
 // isAnagram("silent", "listen") => true
 
 const isAnagram = (stringA, stringB) => {
-  stringA = stringA.replace(/[' ']/g, '').toLowerCase()
-  stringB = stringB.replace(/[' ']/g, '').toLowerCase()
-  
-return stringA.split('').sort().join('') === stringB.split('').sort().join('')
+  stringA = stringA.replace(/[' ']/g, '').toLowerCase();
+  stringB = stringB.replace(/[' ']/g, '').toLowerCase();
+  return stringA.split('').sort().join('') === stringB.split('').sort().join('');
 }
 
-console.log(isAnagram("School master", "The class room"))
+console.log(isAnagram("School master", "The class room"));
