@@ -4,24 +4,22 @@
 
 
 // 1. Implementati o functie care accepta ca parametru o valoare numerica si returneaza suma numerelor de la 1 pana la valoarea specificata
-
-
-const sum1 = (number) => {
+const sum1 = number => {
     return number * (number - 1) / 2;
 }
-console.log(sum1(56))
+console.log(sum1(56));
 
-const sum2 = (number) => {
+const sum2 = number => {
     let result = 0;
     for (i = 0; i < number; i++) {
         result += i;
     }
     return result;
 }
-console.log(sum2(56))
+console.log(sum2(56));
 
 // 2. Implementati o functie care accepta ca parametru un string si returneaza cel mai lung cuvant din acel string.
-const findLongestWord = (string) => {
+const findLongestWord = string => {
     let stringToArray = string.split(' ');
     let longestWord = '';
     for (i = 0; i < stringToArray.length; i++) {
@@ -31,22 +29,24 @@ const findLongestWord = (string) => {
     }
     return longestWord;
 }
-console.log(findLongestWord('longest word is thisssssss'))
+console.log(findLongestWord('longest word is thisssssss'));
 
 // 3. Implementati o functie care accepta ca parametru un string si ii face 'reverse'
-
-const reverseString = (string) => {
+const reverseString = string => {
     let stringToArray = string.split('');
     return stringToArray.reverse().join('');
 }
-console.log(reverseString('reverse a string'))
+console.log(reverseString('reverse a string'));
 
 // 4. Implementati o functie care accepta ca parametru un string si inlocuieste fiecare litera din acesta cu urmatoarea litera din alfabet
-
-const replaceLetter = (string) => {
+const replaceLetter = string => {
     let string1 = '';
     for (i = 0; i < string.length; i++) {
         if (string.charCodeAt(i) === 32) {
+            string1 += String.fromCharCode(string.charCodeAt(i));
+        } else if (string.charCodeAt(i) === 122) {
+            string1 += String.fromCharCode(string.charCodeAt(i));
+        } else if (string.charCodeAt(i) === 90) {
             string1 += String.fromCharCode(string.charCodeAt(i));
         } else {
             string1 += String.fromCharCode(string.charCodeAt(i) + 1);
@@ -54,32 +54,30 @@ const replaceLetter = (string) => {
     }
     return string1;
 }
-console.log(replaceLetter('abcd ABCD aBcD'))
+console.log(replaceLetter('abcdefghijklmn opqrstuvwxyz'));
+console.log(replaceLetter('ABCDEFGHIJKLMN OPQRSTUVWXYZ'));
 
 // 5. Implementati o functie convertToTime care accepta ca parametru o valoare numerica si o converteste la numarul de ore si minute corespunzatoare.
 // Exemplu: input: 64  ->  output: 1:4
-
-const convertToTime = (number) => {
+const convertToTime = number => {
     let hours = Math.floor(number / 60);
     let minutes = number % 60;
     return `${hours}:${minutes}`;
 }
-console.log(convertToTime(123))
+console.log(convertToTime(123));
 
 // 6. Implementati o functie care accepta ca parametru un string si returneaza string-ul cu toate literele ordonate alfabetic
-
-const alphabeticalOrder = (string) => {
+const alphabeticalOrder = string => {
     let stringToArray = string.split('');
     return stringToArray.sort().join('');
 }
-console.log(alphabeticalOrder('alphabetical'))
+console.log(alphabeticalOrder('alphabetical'));
 
 
 // 7. Implementati o functie care accepta ca parametru un string si verifica daca inainte si dupa fiecare litera din cadrul sau se afla caracterul '+'
 // Exemplu: input: "+a+b+c+"   ->   output: true
 // Exemply: input: "+ab+c+d+"  ->   output: false
-
-const checkIfSum = (string) => {
+const checkIfSum = string => {
     let result = '';
     for (i = 1; i < string.length; i += 2) {
         if (string.charCodeAt(i - 1) === 43 && string.charCodeAt(i + 1) === 43) {
@@ -90,4 +88,4 @@ const checkIfSum = (string) => {
     }
     return result;
 }
-console.log(checkIfSum('+ab+c+'))
+console.log(checkIfSum('+ab+c+'));
