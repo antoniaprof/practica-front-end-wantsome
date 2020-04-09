@@ -187,6 +187,17 @@ const validPin = pin => {
 }
 console.log(validPin('1ffv78'));
 
+// const validPin = pin => {
+//   if (pin.length === 4 || pin.length === 6) {
+//     if (isNaN(pin)) {
+//       return false;
+//     }
+//     return true;
+//   }
+//   return false;
+// console.log(validPin('1356'));
+
+
 //ex11 
 //Folosind regex vreau sa scot toate vocalele dintr-un string
 // removeVowels("Hey I am developer") => "Hy m dvlpr"
