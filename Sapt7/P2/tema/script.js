@@ -65,9 +65,9 @@ function firstevenElement(array, conditionalFn) {
   while (i < array.length && !conditionalFn(array[i])) {
     i++;
   };
-  console.log(array[i]);
+  return array[i];
 };
-firstevenElement([5, 6, 10, 3], conditionalFn)
+console.log(firstevenElement([5, 6, 10, 3], conditionalFn));
 
 
 
@@ -116,8 +116,7 @@ function compare2Strings(string1, string2) {
     while (j < string1.length && (string2.charAt(i) !== string1.charAt(j))) {
       j++;
     }
-    if (j == string1.length);
-    {
+    if (j == string1.length) {
       included = false;
     }
     i++;
@@ -136,18 +135,20 @@ console.log(compare2Strings('nimic', 'mi'))
 // 'sarim' peste ea si afisam urmatorul element
 
 function removeFalse(array) {
+  var result = [];
   for (i = 0; i < array.length; i++) {
-    if (array[i] === undefined || array[i] === false || array[i] === null
-      || array[i] === NaN || array[i] === 0 || array[i] === '') {
+    if (!array[i]) {
       continue;
-    };
-    console.log(array[i]);
-  };
-  return array[i];
-};
+    }
+    result.push(array[i]);
+  }
+  return result;
+}
 
-removeFalse([0, 1, '', NaN, 0 / 0, undefined, 2, 'ilinca', null, false]);
-// nu stiu de ce NaN nu merge...
+console.log(
+  removeFalse([0, 1, '', NaN, 0 / 0, undefined, 2, 'ilinca', null, false])
+);
+
 
 // scriem o functie care accepta ca parametru un string si un numar
 // declaram o variabila index cu valoarea 1
@@ -156,10 +157,12 @@ removeFalse([0, 1, '', NaN, 0 / 0, undefined, 2, 'ilinca', null, false]);
 // incrementam index cu 1
 
 function repeatAString(string, number) {
+  var finalString = '';
   var i = 1;
   while (i <= number) {
-    console.log(string);
+    finalString += string; 
     i++;
   };
+  return finalString;
 };
-repeatAString('homework', 15)
+console.log(repeatAString('homework', 15))
