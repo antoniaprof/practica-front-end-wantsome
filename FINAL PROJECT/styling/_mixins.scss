@@ -1,0 +1,5 @@
+@mixin gridDisplay {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 20% 60% 20%;
+}
