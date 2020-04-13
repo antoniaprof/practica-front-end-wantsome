@@ -1,9 +1,9 @@
 function myMap(array, callback) {
-    var arr = [];
+    let result = [];
     for (var index in array) {
-        arr.push(callback(array[index]));
+        result.push(callback(array[index]));
     }
-    return arr;
+    return result;
 }
 
 var randomArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -56,11 +56,11 @@ console.log(myMap(randomArray, square));  // Implement the function named square
 //     return param % 5 === 0;
 // }
 
-const filter = (array, condition) => {
+const filter = (array, callback) => {
     let filteredArray = [];
     for (let i = 0; i < array.length; i++) {
         let item = array[i];
-        if (condition(array[i]) === true) {
+        if (callback(array[i]) === true) {
             filteredArray.push(item);
         }
     }
@@ -71,16 +71,16 @@ const evenElements = param => param % 2 === 0;
 
 const unevenElements = param => param % 2 === 1;
 
-const bigElements = param => param > 100;
+const biggerThan100Elements = param => param > 100;
 
-const smallElements = param => param < 10;
+const smallerThan10Elements = param => param < 10;
 
 const divBy5Elements = param => param % 5 === 0;
 
 console.log(filter([0, 2, 3, 4, 5, 40, 89, 120, 594], evenElements));
 console.log(filter([0, 2, 3, 4, 5, 40, 89, 120, 594], unevenElements));
-console.log(filter([0, 2, 3, 4, 5, 40, 89, 120, 594], bigElements));
-console.log(filter([0, 2, 3, 4, 5, 40, 89, 120, 594], smallElements));
+console.log(filter([0, 2, 3, 4, 5, 40, 89, 120, 594], biggerThan100Elements));
+console.log(filter([0, 2, 3, 4, 5, 40, 89, 120, 594], smallerThan10Elements));
 console.log(filter([0, 2, 3, 4, 5, 40, 89, 120, 594], divBy5Elements));
 
 
@@ -95,8 +95,8 @@ const multipleCallbacks = (object, succesFn, errorFn) => {
         errorFn();
     } else if (object.status === 'succes') {
         succesFn();
-    }
-}
+    };
+};
 
 multipleCallbacks({ status: 'succes' },
     () => {
