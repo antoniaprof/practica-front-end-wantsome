@@ -8,57 +8,106 @@
 </head>
 
 <body>
-    <div id='container'>
-        <header>
+    <div class='container'>
+        <header class='search'>
             <form>
-                <input type='text' placeholder='Search'>
-                <input type='checkbox' id='meat' name='meat'>
-                <label for='meat'>Meat</label>
-                <input type='checkbox' id='vegan' name='vegan'>
-                <label for='vegan'>Vegan</label>
-                <input type='checkbox' id='glutenFree' name='glutenFree'>
-                <label for='glutenFree'>Gluten free</label>
+                <div class='searchBar'>
+                    <img class="searchBarIcon"
+                        src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+                    <input class='searchBarText' type='text' placeholder='Search'>
+                </div>
+                <div class='searchOptions'>
+                    <div class="slider">
+                        <div class="toggleButton">
+                            <div class="innerCircle"></div>
+                        </div>
+                    </div>
+                    <input type='checkbox' id='meat' name='meat'>
+                    <label class='option' for='meat'>Meat</label>
+                    <div class="slider">
+                        <div class="toggleButton">
+                            <div class="innerCircle"></div>
+                        </div>
+                    </div>
+                    <input type='checkbox' id='vegan' name='vegan'>
+                    <label class='option' for='vegan'>Vegan</label>
+                    <div class="slider">
+                        <div class="toggleButton">
+                            <div class="innerCircle"></div>
+                        </div>
+                    </div>
+                    <input type='checkbox' id='glutenFree' name='glutenFree'>
+                    <label class='option' for='glutenFree'>Gluten free</label>
+                </div>
             </form>
         </header>
 
-        <nav>
-            <section>
-                <button type='button' onclick=''></button>
-                <button type='button' onclick=''></button>
+        <section class='lateralBar'>
+            <section class='user'>
+                <a href='#'>
+                    <img class='logo'
+                        src='https://png.pngtree.com/element_our/png_detail/20181228/delivery-truck-vector-icon-png_296956.jpg' />
+                </a>
+                <a href='#'>
+                    <img class='notification'
+                        src='https://banner2.cleanpng.com/20180523/egr/kisspng-computer-icons-button-clip-art-notifications-5b05486f809aa9.3100511115270728795268.jpg' />
+                </a>
+                <img class='userImg' src='https://lofrev.net/wp-content/photos/2017/03/user_blue_logo.png' />
+                <p>Hello Maciej</p>
+                <label for='plan'>Your plan:</label>
+                <select id='plan'>
+                    <option value='free'>Free</option>
+                    <option value='paid'>Paid</option>
+                </select><br>
+                <button type='button' class='greenButton' onclick=''>Create new meal +</button>
             </section>
-            <section id='user'>
-                <button type='button' onclick=''>Create new meal</button>
-            </section>
-            <section id='menu'>
+            <section class='menu'>
                 <p>MENU</p>
-                <a href='#'>Overview</a><br>
-                <a href='#'>Meals</a><br>
-                <a href='#'>User account</a><br>
-                <a href='#'>Order history</a><br>
-                <a href='#'>Calendar</a><br>
+                <nav>
+                    <a href='#'>Overview</a><br>
+                    <a href='#'>Meals</a><br>
+                    <a href='#'>User account</a><br>
+                    <a href='#'>Order history</a><br>
+                    <a href='#'>Calendar</a><br>
+                </nav>
                 <p>COMMUNITY</p>
-                <a href='#'>Reviews</a><br>
-                <a href='#'>User recipes</a><br>
+                <nav>
+                    <a href='#'>Reviews</a><br>
+                    <a href='#'>User recipes</a><br>
+                </nav>
             </section>
-            <section id=logOut>
-                <a href='#'>Log out</a>
+            <section class=logOut>
+                <img class='logOutLogo'
+                    src='https://www.pngitem.com/pimgs/m/126-1264365_grey-logout-icon-png-transparent-png.png' />
+                <a href='#'> Log out</a>
             </section>
-        </nav>
+        </section>
 
         <main>
-            <section id='mainSection'>
+            <section class='mainSection'>
                 <h2>Today's option</h2>
                 <p>Drag and drop meals to your plan</p>
+                <button type='button' class='whiteButton' onclick=''>Compare meals</button><br>
+                <button type='button' class='whiteButton' onclick=''>Filter</button><br>
+                <select id='mealType'>
+                    <option value='all'>All cuisine</option>
+                    <option value='italian'>Italian</option>
+                    <option value='greek'>Greek</option>
+                    <option value='thai'>Thai</option>
+                    <option value='chinese'>Chinese</option>
+                    <option value='indian'>Indian</option>
+                    <option value='cajun'>Cajun</option>
+                </select><br>
                 <div class='foodItem'></div>
                 <div class='foodItem'></div>
                 <div class='foodItem'></div>
             </section>
-            <section id='sideSection'>
+            <section class='sideSection'>
                 <h2>Create your meal plan</h2>
                 <h3>Breakfast</h3>
                 <h3>Lunch</h3>
                 <h3>Dinner</h3>
-                <button type='button' onclick=''>Save meals and pay</button><br>
+                <button type='button' class='greenButton' onclick=''>Save meals and pay</button><br>
                 <button type='button' onclick=''>Payment</button>
             </section>
         </main>
