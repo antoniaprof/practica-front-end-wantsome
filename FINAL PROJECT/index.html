@@ -86,18 +86,28 @@
         <main>
             <section class='mainSection'>
                 <h2>Today's option</h2>
-                <p>Drag and drop meals to your plan</p>
+                <p class='mainSectionText'>Drag and drop meals to your plan</p>
                 <button type='button' class='whiteButton' onclick=''>Compare meals</button><br>
                 <button type='button' class='whiteButton' onclick=''>Filter</button><br>
-                <select id='mealType'>
-                    <option value='all'>All cuisine</option>
-                    <option value='italian'>Italian</option>
-                    <option value='greek'>Greek</option>
-                    <option value='thai'>Thai</option>
-                    <option value='chinese'>Chinese</option>
-                    <option value='indian'>Indian</option>
-                    <option value='cajun'>Cajun</option>
-                </select><br>
+                <div class='sortMeals'>
+                    <div>
+                    <label for='sortBy'>Sort by:</label>
+                    <select id='sortBy'>
+                        <option value='price'>Price</option>
+                        <option value='calories'>Calories</option>
+                        <option value='name'>Name</option>
+                    </select>
+                    </div>
+                    <select id='mealType'>
+                        <option value='all'>All cuisine</option>
+                        <option value='italian'>Italian</option>
+                        <option value='greek'>Greek</option>
+                        <option value='thai'>Thai</option>
+                        <option value='chinese'>Chinese</option>
+                        <option value='indian'>Indian</option>
+                        <option value='cajun'>Cajun</option>
+                    </select><br>        
+                </div>
                 <div class='foodItem'></div>
                 <div class='foodItem'></div>
                 <div class='foodItem'></div>
@@ -105,10 +115,13 @@
             <section class='sideSection'>
                 <h2>Create your meal plan</h2>
                 <h3>Breakfast</h3>
+                <div class='dropBox'></div>
                 <h3>Lunch</h3>
+                <div class='dropBox'></div>
                 <h3>Dinner</h3>
+                <div class='dropBox'></div>
                 <button type='button' class='greenButton' onclick=''>Save meals and pay</button><br>
-                <button type='button' onclick=''>Payment</button>
+                <button type='button' class='greyButton' onclick=''>Payment</button>
             </section>
         </main>
     </div>

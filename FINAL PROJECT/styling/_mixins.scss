@@ -11,7 +11,7 @@
 @mixin gridDisplay {
     display: grid;
     grid-template-rows: 10% 90%;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 20% 80%;
 }
 
 @mixin greenButton {
@@ -21,24 +21,31 @@
     width: 60vw;
     height: 12vw;
     color: white;
-    font-size: 5vw;
     background-color: $darkGreen;
 }
 
 @mixin whiteButton {
-    margin: 2vw;
     border: 0.2vw solid $lightGrey;
     border-radius: 5px;
     width: 60vw;
     height: 12vw;
     color: $darkGrey;
-    font-size: 5vw;
     background-color: $whiteBackground;
 }
 
 @mixin buttonHover {
     background-color: $lightGreen;
     color: $darkGreen;
+}
+
+@mixin greyButton {
+    margin: 2vw;
+    border: 0.2vw solid $lightGrey;
+    border-radius: 5px;
+    width: 60vw;
+    height: 15vw;
+    color: $darkGrey;
+    background-color: $lightGreyBackground;
 }
 
 @mixin logOut {
@@ -50,12 +57,16 @@
 @mixin search {
     color: $lightGrey;
     border: transparent;
-    font-size: 5vw;
 }
 
 @mixin select {
     border: transparent;
     background: transparent;
     color: $darkGreen;
-    font-size: 5vw;
+}
+
+@mixin dropBox {
+    border: 2px dotted $darkGrey;
+    width : 60vw;
+    height: 15vw;
 }

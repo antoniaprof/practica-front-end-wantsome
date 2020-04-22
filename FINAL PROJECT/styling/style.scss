@@ -1,18 +1,28 @@
 @import "variables";
 @import "mixins";
 
+body {
+    width: 100vw;
+    margin: 0px;
+}
+
 .container {
     @include flexDisplay;
+    width: 100vw;
     color: $lightGrey;
-    font-size: 5vw;
+    font-family: sans-serif;
 }
 
 // Lateral grey part
 .lateralBar {
-    border-bottom: 3px solid $darkGreen;
-    padding: 20px;
+    border-bottom: 1px solid $darkGreen;
+    padding: 5vw;
     order: -1;
     background-color: $lightGreyBackground;
+}
+
+.lateralBar p {
+    font-size: larger;
 }
 
 .logo {
@@ -21,7 +31,7 @@
 
 .notification {
     width: 10vw;
-    height: 6vw;
+    height: 3vh;
     float: right;
     padding: 2vw;
 }
@@ -39,7 +49,7 @@ nav {
 }
 
 .user p {
-    font-size: 8vw;
+    margin: 0;
     font-weight: bold;
     color: $darkGrey;
 }
@@ -53,8 +63,8 @@ nav {
 }
 
 .logOutLogo {
-    width: 8vw;
-    height: 8vw;
+    width: 4vw;
+    height: 2vh;
 }
 
 // search
@@ -65,6 +75,7 @@ nav {
 .searchBar {
     padding: 3vw;
 }
+
 .searchBarText {
     @include search;
 }
@@ -78,26 +89,47 @@ nav {
 }
 
 .toggleButton {
-    width: 8vw;
-    height: 4vw;
+    width: 40px;
+    height: 20px;
     border-radius: 15px;
     background: $lightGreen;
     padding: 0.5vw;
 }
 
 .innerCircle {
-    width: 4vw;
-    height: 4vw;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: $darkGreen;
 }
 
+label.option {
+    padding: 2vw;
+    font-size: 0.8em;
+}
+
 // main section
 h2 {
+    margin: 0;
     color: $darkGrey;
+    text-align: center;
+}
+
+.mainSectionText {
+    text-align: center;
+}
+
+.sortMeals {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #mealType {
+    @include select;
+}
+
+#sortBy {
     @include select;
 }
 
@@ -106,39 +138,46 @@ h2 {
 }
 
 .foodItem {
-    margin : 2vw;
-    border: 0.2vw solid $lightGrey; 
+    margin: 2vh 0;
+    border: 1px solid $lightGrey;
     border-radius: 5px;
-    width: 90vw;
+    width: 80vw;
     height: 30vw;
 }
 .mainSection {
-    border-bottom: 3px solid $darkGreen;
+    @include flexDisplay;
+    align-items: center;
+    border-bottom: 1px solid $darkGreen;
 }
 
+// side section
 
+h3 {
+    text-align: center;
+}
 
+.dropBox {
+    @include dropBox;
+}
 
+.greyButton {
+    @include greyButton;
+}
 
-
-
-
-
-
-
-
-
-
+.sideSection {
+    background-color: $lightGreyBackground;
+    @include flexDisplay;
+    align-items: center;
+}
 
 // @media screen and (min-device-width: 768px) {
-// }
-
-// @media screen and (min-width: 1025px) {
 //     body {
 //         background-color: $darkGreyBackground;
 //     }
 //     #container {
 //         @include gridDisplay;
+//         width: 80vw;
+//         height: 70vw;
 //         margin: 12% 5%;
 //         border-radius: 10px;
 //         padding: 15px;
@@ -147,7 +186,7 @@ h2 {
 
 //     header {
 //         grid-row: 1;
-//         grid-column: 2 / 4;
+//         grid-column: 2 / 3;
 //     }
 
 //     .lateralBar {
@@ -161,11 +200,5 @@ h2 {
 //         display: inline-block;
 //         grid-row: 2;
 //         grid-column: 2;
-//     }
-
-//     #sideSection {
-//         display: inline-block;
-//         grid-row: 2;
-//         grid-column: 3;
 //     }
 // }
