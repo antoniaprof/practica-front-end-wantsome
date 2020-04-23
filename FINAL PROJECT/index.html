@@ -41,17 +41,19 @@
                 </div>
             </form>
         </header>
-
+        <section class='logoBanner'>
+            <a href='#'>
+                <img class='logo'
+                    src='https://png.pngtree.com/element_our/png_detail/20181228/delivery-truck-vector-icon-png_296956.jpg' />
+            </a>
+            <a href='#'>
+                <img class='notification'
+                    src='https://banner2.cleanpng.com/20180523/egr/kisspng-computer-icons-button-clip-art-notifications-5b05486f809aa9.3100511115270728795268.jpg' />
+            </a>
+        </section>
         <section class='lateralBar'>
+
             <section class='user'>
-                <a href='#'>
-                    <img class='logo'
-                        src='https://png.pngtree.com/element_our/png_detail/20181228/delivery-truck-vector-icon-png_296956.jpg' />
-                </a>
-                <a href='#'>
-                    <img class='notification'
-                        src='https://banner2.cleanpng.com/20180523/egr/kisspng-computer-icons-button-clip-art-notifications-5b05486f809aa9.3100511115270728795268.jpg' />
-                </a>
                 <img class='userIcon' src='https://lofrev.net/wp-content/photos/2017/03/user_blue_logo.png' />
                 <p>Hello Maciej</p>
                 <label for='plan'>Your plan:</label>
@@ -63,17 +65,17 @@
             </section>
             <section class='menu'>
                 <p>MENU</p>
-                <nav>
-                    <a href='#'>Overview</a><br>
-                    <a href='#'>Meals</a><br>
-                    <a href='#'>User account</a><br>
-                    <a href='#'>Order history</a><br>
-                    <a href='#'>Calendar</a><br>
+                <nav class='navLinks'>
+                    <a class='menuLink' href='#'>Overview</a><br>
+                    <a class='menuLink' href='#'>Meals</a><br>
+                    <a class='menuLink' href='#'>User account</a><br>
+                    <a class='menuLink' href='#'>Order history</a><br>
+                    <a class='menuLink' href='#'>Calendar</a><br>
                 </nav>
                 <p>COMMUNITY</p>
-                <nav>
-                    <a href='#'>Reviews</a><br>
-                    <a href='#'>User recipes</a><br>
+                <nav class='navLinks'>
+                    <a class='communityLink' href='#'>Reviews</a><br>
+                    <a class='communityLink' href='#'>User recipes</a><br>
                 </nav>
             </section>
             <section class=logOut>
@@ -85,18 +87,18 @@
 
         <main>
             <section class='mainSection'>
-                <h2>Today's option</h2>
+                <h2 class='mainSectionTitle'>Today's option</h2>
                 <p class='mainSectionText'>Drag and drop meals to your plan</p>
-                <button type='button' class='whiteButton' onclick=''>Compare meals</button><br>
-                <button type='button' class='whiteButton' onclick=''>Filter</button><br>
+                <button class='whiteButton' type='button' onclick=''>Compare meals</button><br>
+                <button class='whiteButton' type='button' onclick=''>Filter</button><br>
                 <div class='sortMeals'>
                     <div>
-                    <label for='sortBy'>Sort by:</label>
-                    <select id='sortBy'>
-                        <option value='price'>Price</option>
-                        <option value='calories'>Calories</option>
-                        <option value='name'>Name</option>
-                    </select>
+                        <label for='sortBy'>Sort by:</label>
+                        <select id='sortBy'>
+                            <option value='price'>Price</option>
+                            <option value='calories'>Calories</option>
+                            <option value='name'>Name</option>
+                        </select>
                     </div>
                     <select id='mealType'>
                         <option value='all'>All cuisine</option>
@@ -106,19 +108,19 @@
                         <option value='chinese'>Chinese</option>
                         <option value='indian'>Indian</option>
                         <option value='cajun'>Cajun</option>
-                    </select><br>        
+                    </select><br>
                 </div>
                 <div class='foodItem'></div>
                 <div class='foodItem'></div>
                 <div class='foodItem'></div>
             </section>
             <section class='sideSection'>
-                <h2>Create your meal plan</h2>
-                <h3>Breakfast</h3>
+                <h2 class='sideSectionTitle'>Create your meal plan</h2>
+                <h3 class='sideSectionSubtitle'>Breakfast</h3>
                 <div class='dropBox'></div>
-                <h3>Lunch</h3>
+                <h3 class='sideSectionSubtitle'>Lunch</h3>
                 <div class='dropBox'></div>
-                <h3>Dinner</h3>
+                <h3 class='sideSectionSubtitle'>Dinner</h3>
                 <div class='dropBox'></div>
                 <button type='button' class='greenButton' onclick=''>Save meals and pay</button><br>
                 <button type='button' class='greyButton' onclick=''>Payment</button>

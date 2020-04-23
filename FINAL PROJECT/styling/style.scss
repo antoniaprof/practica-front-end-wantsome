@@ -15,6 +15,11 @@ body {
 }
 
 // // Lateral grey part
+.logoBanner {
+    background-color: $lightGreyBackground;
+    order: -2;
+}
+
 .lateralBar {
     border-bottom: 1px solid $darkGreen;
     padding: 5vw;
@@ -37,7 +42,7 @@ body {
     display: none;
 }
 
-nav {
+.navLinks {
     display: none;
 }
 
@@ -106,10 +111,8 @@ label.option {
 }
 
 // main section
-h2 {
-    margin: 0;
-    color: $darkGrey;
-    text-align: center;
+.mainSectionTitle {
+    @include title;
 }
 
 .mainSectionText {
@@ -130,28 +133,29 @@ h2 {
     @include select;
 }
 
-// .whiteButton {
-//     @include whiteButton;
-// }
+.whiteButton {
+    @include whiteButton;
+}
 
-// .foodItem {
-//     margin: 2vh 0;
-//     border: 1px solid $lightGrey;
-//     border-radius: 5px;
-//     width: 80vw;
-//     height: 30vw;
-// }
-// .mainSection {
-//     @include flexDisplay;
-//     align-items: center;
-//     border-bottom: 1px solid $darkGreen;
-// }
+.foodItem {
+    @include foodItem;
+}
+
+.mainSection {
+    @include flexDisplay;
+    align-items: center;
+    border-bottom: 1px solid $darkGreen;
+}
 
 // side section
 
-// h3 {
-//     text-align: center;
-// }
+.sideSectionTitle {
+    @include title;
+}
+
+.sideSectionSubtitle {
+    text-align: center;
+}
 
 // .dropBox {
 //     @include dropBox;
@@ -161,11 +165,11 @@ h2 {
 //     @include greyButton;
 // }
 
-// .sideSection {
-//     background-color: $lightGreyBackground;
-//     @include flexDisplay;
-//     align-items: center;
-// }
+.sideSection {
+    background-color: $lightGreyBackground;
+    @include flexDisplay;
+    align-items: center;
+}
 
 @media screen and (min-device-width: 768px) {
     body {
@@ -179,30 +183,32 @@ h2 {
         max-width: 90vw;
         height: 100vh;
         @include gridDisplay;
-        background-color: $whiteBackground;
+        background-color: $greyLine;
     }
 
-    header {
+    .search {
         grid-row: 1;
         grid-column: 2 / 3;
+        background-color: $whiteBackground;
+        border-radius: 0 10px 0 0;
     }
 
     .lateralBar {
-        display: inline-block;
-        grid-row: 1 / 3;
+        grid-row: 2;
         grid-column: 1;
         border-bottom: none;
-        border-radius: 10px 0 0 10px;
+        border-radius: 0 0 0 10px;
         padding: 25px;
         order: 1;
         font-size: small;
     }
 
-    .mainSection {
-        display: inline-block;
-        grid-row: 2;
-        grid-column: 2;
+    .logoBanner {
+        grid-row: 1;
+        grid-column: 1;
+        border-radius: 10px 0 0 0;
     }
+
 
     // lateral grey bar
     .logo {
@@ -229,11 +235,11 @@ h2 {
         padding: 0 20px;
     }
 
-    nav {
+    .navLinks {
         display: block;
     }
 
-    nav a {
+    .menuLink, .communityLink {
         display: block;
         text-decoration: none;
         color: $lightGrey;
@@ -242,14 +248,15 @@ h2 {
         border-radius: 25px;
     }
 
-    nav a:hover {
+    .menuLink:hover, .communityLink:hover {
         background-color: $whiteBackground;
     }
+
     .logOut {
         margin-top: 2vw;
         border: 1px solid transparent;
         border-radius: 25px;
-        padding: 6px;  
+        padding: 6px;
     }
 
     .logOut:hover {
@@ -266,7 +273,7 @@ h2 {
     .search {
         padding: 25px;
     }
-    
+
     .searchBar {
         display: inline-block;
         padding: 5px;
@@ -274,7 +281,6 @@ h2 {
 
     .searchOptions {
         float: right;
-        display: inline-block;
     }
 
     .toggleButton {
@@ -284,7 +290,7 @@ h2 {
         background: $lightGreen;
         padding: 3px;
     }
-    
+
     .innerCircle {
         width: 15px;
         height: 15px;
@@ -295,5 +301,53 @@ h2 {
     label.option {
         padding: 3px;
         font-size: 0.8em;
+    }
+
+    // main section
+    .whiteButton {
+        @include desktopWhiteButton;
+    }
+
+    .foodItem {
+        @include desktopFoodItem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mainSection {
+        display: inline-block;
+        grid-row: 2;
+        grid-column: 2;
+        background-color: $whiteBackground;
+        width: 75%;
+        border-bottom: none;
+        text-align: left;
+        padding: 2vw;
+    }
+
+    .mainSectionTitle {
+        display: inline-block;
+        @include desktopTitle;
+        font-size: 2em;
+    }
+
+    .mainSectionText {
+        text-align: left;
+    }
+
+    .sideSection {
+        width: 25%;
+        border-radius: 0 0 10px 0;
+        background-color: $whiteBackground;
+        padding: 2vw;
+    }
+
+    .sideSectionTitle {
+        @include desktopTitle;
+        font-size: 1.5em;
+        font-weight: bold;
     }
 }

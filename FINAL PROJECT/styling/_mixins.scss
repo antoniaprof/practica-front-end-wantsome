@@ -7,6 +7,7 @@
 @mixin desktopLogo {
     width: 50px;
     height: 50px;
+    padding: 1vw;
 }
 
 @mixin flexDisplay {
@@ -18,7 +19,7 @@
     display: grid;
     grid-template-rows: 10% 90%;
     grid-template-columns: 20% 80%;
-    grid-gap: 3px ;
+    grid-gap: 1px ;
 }
 
 @mixin greenButton {
@@ -46,6 +47,23 @@
     border-radius: 5px;
     width: 60vw;
     height: 12vw;
+    color: $darkGrey;
+    background-color: $whiteBackground;
+}
+
+@mixin foodItem {
+        margin: 2vh 0;
+        border: 1px solid $lightGrey;
+        border-radius: 5px;
+        width: 80vw;
+        height: 30vw;
+}
+
+@mixin desktopWhiteButton {
+    border: 0.2vw solid $lightGrey;
+    border-radius: 5px;
+    width: 15vw;
+    height: 5vh;
     color: $darkGrey;
     background-color: $whiteBackground;
 }
@@ -91,4 +109,22 @@
 @mixin userIcon {
     width: 30px;
     height: 30px;
+}
+
+@mixin title {
+    margin: 0;
+    color: $darkGrey;
+    text-align: center;
+}
+@mixin desktopTitle {
+    text-align: left;
+    font-family: Verdana, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    font-weight: lighter;
+}
+@mixin desktopFoodItem {
+    margin: 2vh 0;
+    border: 1px solid #a6a8a3;
+    border-radius: 5px;
+    width: 40vw;
+    height: 15vh;
 }
