@@ -1,0 +1,46 @@
+body {
+    padding: 3% 40%;
+}
+
+form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    color: grey;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 25px;
+    background-color: rgb(240, 233, 233);
+    border: 1px solid lightgrey;
+}
+
+button[type="submit"] {
+    width: 300px;
+    height: 40px;
+    margin: 10px 0;
+    color: white;
+    background-color: rgb(26, 24, 24);
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+}
+
+#warning {
+    width: 300px;
+    height: 25px;
+    background-color: pink;
+    border: 1px solid rgb(202, 57, 57);
+    margin: 15px 0; 
+}
+
+/* input[type="submit"]::after { 
+    content: "NEXT";
+} */
