@@ -20,7 +20,7 @@ const createInput = () => {
         '(Must be input)', '(Must be input)', '', '(Must be at least 10 characters, numbers only.)']
     let i = 0;
     for (key in user) {
-       let label = document.createElement('label');
+        let label = document.createElement('label');
         label.id = key.toUpperCase();
         label.htmlFor = key;
         label.textContent = user[key];
@@ -74,51 +74,73 @@ submit.type = 'submit';
 submit.textContent = 'NEXT';
 form.appendChild(submit);
 
-
-let warning = document.createElement('div');
-warning.id = 'warning';
-
+let usernameWarning = document.createElement('div');
+usernameWarning.className = 'warning';
+usernameWarning.textContent = 'Please enter a username';
+document.querySelector('#USERNAME').appendChild(usernameWarning);
 const validateUsername = () => {
     let username = document.querySelector('#username').value;
     if (!(/^[a-z0-9]+$/i.test(username)) || username.length < 4) {
-        warning.textContent = 'Please enter a username';
-        document.querySelector('#USERNAME').appendChild(warning);
+        usernameWarning.style.display = 'block';
+    } else {
+        usernameWarning.style.display = 'none';
+
     }
 };
 
+let emailWarning = document.createElement('div');
+emailWarning.className = 'warning';
+emailWarning.textContent = 'Please enter a valid adress';
+document.querySelector('#EMAIL').appendChild(emailWarning);
 const validateEmail = () => {
     let email = document.querySelector('#email').value;
     if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
-        warning.textContent = 'Please enter a valid adress';
-        document.querySelector('#EMAIL').appendChild(warning);
+        emailWarning.style.display = 'block';
+    } else {
+        emailWarning.style.display = 'none';
+
     }
 }
 
+let firstNameWarning = document.createElement('div');
+firstNameWarning.className = 'warning';
+firstNameWarning.textContent = 'Please enter a First Name';
+document.querySelector('#FIRSTNAME').appendChild(firstNameWarning);
 const validatefirstName = () => {
     let firstname = document.querySelector('#firstName').value;
     if (!(/^[a-z]+$/i.test(firstname))) {
-        warning.textContent = 'Please enter a First Name';
-        document.querySelector('#FIRSTNAME').appendChild(warning);
-
+        firstNameWarning.style.display = 'block';
+    } else {
+        firstNameWarning.style.display = 'none';
     }
 };
 
+let lastNameWarning = document.createElement('div');
+lastNameWarning.className = 'warning';
+lastNameWarning.textContent = 'Please enter a Last Name';
+document.querySelector('#LASTNAME').appendChild(lastNameWarning);
 const validatelastName = () => {
     let lastname = document.querySelector('#lastName').value;
     if (!(/^[a-z]+$/i.test(lastname))) {
-        warning.textContent = 'Please enter a Last Name';
-        document.querySelector('#LASTNAME').appendChild(warning);
+        lastNameWarning.style.display = 'block';
+    } else {
+        lastNameWarning.style.display = 'none';
     }
 };
 
+let phoneWarning = document.createElement('div');
+phoneWarning.className = 'warning';
+phoneWarning.textContent = 'Please enter a Phone!';
+document.querySelector('#PHONE').appendChild(phoneWarning);
 const validatePhone = () => {
     let phoneNr = document.querySelector('#phone').value;
     if (isNaN(phoneNr) || phoneNr.length < 10) {
-        warning.textContent = 'Please enter a Phone!';
-        document.querySelector('#PHONE').appendChild(warning);
-
+        phoneWarning.style.display = 'block';
+    } else {
+        phoneWarning.style.display = 'none';
     }
 }
+
 
 function validateForm() {
     validatePhone();
