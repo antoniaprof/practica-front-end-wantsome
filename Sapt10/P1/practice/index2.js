@@ -10,14 +10,12 @@
 // si faceti un story din ele
 // ex "Xulescu este innebunit dupa bere neagra"
 
+
 let button = document.querySelector('button');
 
  const postTheGossip = () => {
-    let fields = document.querySelectorAll('input');
-    console.log(field)
-    let fields =field.select();
-     console.log(fields)
-        alert(fields[0] + 'este' + fields[1] + 'dupa' + fields[2]); 
-}
+   let fields = document.querySelectorAll('input');
+      alert(`${fields[0].value} este  ${fields[1].value} dupa ${fields[2].value}`); 
+ }
 
-button.onclick = postTheGossip()
+button.onclick = postTheGossip;
