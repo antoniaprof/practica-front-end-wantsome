@@ -36,7 +36,7 @@
     margin: 20px 10px;
     border-style: none;
     border-radius: 5px;
-    width: 15vw;
+    width: 13vw;
     height: 5vh;
     color: white;
     background-color: $darkGreen;
@@ -51,21 +51,21 @@
     background-color: $whiteBackground;
 }
 
+@mixin desktopWhiteButton {
+    border: 1.5px solid $lightGrey;
+    border-radius: 5px;
+    width: 15vw;
+    height: 5vh;
+    color: $darkGrey;
+    background-color: $whiteBackground;
+}
+
 @mixin foodItem {
         margin: 2vh 0;
         border: 1px solid $lightGrey;
         border-radius: 5px;
         width: 80vw;
         height: 30vw;
-}
-
-@mixin desktopWhiteButton {
-    border: 0.2vw solid $lightGrey;
-    border-radius: 5px;
-    width: 15vw;
-    height: 5vh;
-    color: $darkGrey;
-    background-color: $whiteBackground;
 }
 
 @mixin buttonHover {
@@ -79,6 +79,16 @@
     border-radius: 5px;
     width: 60vw;
     height: 15vw;
+    color: $darkGrey;
+    background-color: $lightGreyBackground;
+}
+
+@mixin desktopGreyButton {
+    margin: 2vw;
+    border: 1.5px solid $lightGrey;
+    border-radius: 5px;
+    width: 13vw;
+    height: 5vh;
     color: $darkGrey;
     background-color: $lightGreyBackground;
 }
@@ -106,6 +116,12 @@
     height: 15vw;
 }
 
+@mixin desktopDropBox {
+    border: 2px dotted $darkGrey;
+    width: 15vw;
+    height: 3vw;
+}
+
 @mixin userIcon {
     width: 30px;
     height: 30px;
@@ -116,11 +132,13 @@
     color: $darkGrey;
     text-align: center;
 }
+
 @mixin desktopTitle {
     text-align: left;
     font-family: Verdana, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
     font-weight: lighter;
 }
+
 @mixin desktopFoodItem {
     margin: 2vh 0;
     border: 1px solid #a6a8a3;
@@ -128,3 +146,5 @@
     width: 40vw;
     height: 15vh;
 }
+
+

@@ -112,8 +112,8 @@ body {
   width: 40px;
   height: 20px;
   border-radius: 15px;
-  background: #e1efb0;
   padding: 0.5vw;
+  background: #e1efb0;
 }
 
 .innerCircle {
@@ -204,8 +204,32 @@ label.option {
   text-align: center;
 }
 
-.sideSection {
+.dropBox {
+  border: 2px dotted #313942;
+  width: 60vw;
+  height: 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.greyButton {
+  margin: 2vw;
+  border: 0.2vw solid #a6a8a3;
+  border-radius: 5px;
+  width: 60vw;
+  height: 15vw;
+  color: #313942;
   background-color: #f4f6f3;
+}
+
+.sideSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,6 +237,7 @@ label.option {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #f4f6f3;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -223,12 +248,6 @@ label.option {
     background-color: #d4e6d4;
   }
   .container {
-    margin: 12% 5%;
-    border-radius: 10px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    max-width: 90vw;
-    height: 100vh;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 10% 90%;
@@ -236,6 +255,12 @@ label.option {
     -ms-grid-columns: 20% 80%;
         grid-template-columns: 20% 80%;
     grid-gap: 1px;
+    max-width: 90vw;
+    height: 100vh;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 12% 5%;
+    border-radius: 10px;
     background-color: #eeeaea;
   }
   .search {
@@ -244,8 +269,8 @@ label.option {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
-    background-color: #fefeff;
     border-radius: 0 10px 0 0;
+    background-color: #fefeff;
   }
   .lateralBar {
     -ms-grid-row: 2;
@@ -273,21 +298,21 @@ label.option {
     padding: 1vw;
   }
   .notification {
-    margin-top: -10px;
+    float: right;
     width: 20px;
     height: 20px;
-    float: right;
+    margin-top: -10px;
   }
   .userIcon {
-    display: block;
     width: 30px;
     height: 30px;
+    display: block;
   }
   .greenButton {
     margin: 20px 10px;
     border-style: none;
     border-radius: 5px;
-    width: 15vw;
+    width: 13vw;
     height: 5vh;
     color: white;
     background-color: #46b04a;
@@ -298,15 +323,17 @@ label.option {
   .navLinks {
     display: block;
   }
-  .menuLink, .communityLink {
+  .menuLink,
+  .communityLink {
     display: block;
-    text-decoration: none;
-    color: #a6a8a3;
     border: 1px solid transparent;
     padding: 6px;
     border-radius: 25px;
+    text-decoration: none;
+    color: #a6a8a3;
   }
-  .menuLink:hover, .communityLink:hover {
+  .menuLink:hover,
+  .communityLink:hover {
     background-color: #fefeff;
   }
   .logOut {
@@ -337,8 +364,8 @@ label.option {
     width: 25px;
     height: 15px;
     border-radius: 15px;
-    background: #e1efb0;
     padding: 3px;
+    background: #e1efb0;
   }
   .innerCircle {
     width: 15px;
@@ -350,13 +377,23 @@ label.option {
     padding: 3px;
     font-size: 0.8em;
   }
+  .whiteButtons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .whiteButton {
-    border: 0.2vw solid #a6a8a3;
+    border: 1.5px solid #a6a8a3;
     border-radius: 5px;
     width: 15vw;
     height: 5vh;
     color: #313942;
     background-color: #fefeff;
+    margin: 5px;
   }
   .foodItem {
     margin: 2vh 0;
@@ -380,17 +417,17 @@ label.option {
     grid-row: 2;
     -ms-grid-column: 2;
     grid-column: 2;
-    background-color: #fefeff;
     width: 75%;
     border-bottom: none;
-    text-align: left;
     padding: 2vw;
+    background-color: #fefeff;
+    text-align: left;
   }
   .mainSectionTitle {
-    display: inline-block;
     text-align: left;
     font-family: Verdana, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
     font-weight: lighter;
+    display: inline-block;
     font-size: 2em;
   }
   .mainSectionText {
@@ -399,8 +436,8 @@ label.option {
   .sideSection {
     width: 25%;
     border-radius: 0 0 10px 0;
-    background-color: #fefeff;
     padding: 2vw;
+    background-color: #fefeff;
   }
   .sideSectionTitle {
     text-align: left;
@@ -408,6 +445,29 @@ label.option {
     font-weight: lighter;
     font-size: 1.5em;
     font-weight: bold;
+  }
+  .dropBox {
+    border: 2px dotted #313942;
+    width: 15vw;
+    height: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .greyButton {
+    margin: 2vw;
+    border: 1.5px solid #a6a8a3;
+    border-radius: 5px;
+    width: 13vw;
+    height: 5vh;
+    color: #313942;
+    background-color: #f4f6f3;
   }
 }
 /*# sourceMappingURL=style.css.map */

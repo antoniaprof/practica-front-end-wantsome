@@ -14,7 +14,7 @@ body {
     font-family: sans-serif;
 }
 
-// // Lateral grey part
+// Lateral grey part
 .logoBanner {
     background-color: $lightGreyBackground;
     order: -2;
@@ -94,8 +94,8 @@ body {
     width: 40px;
     height: 20px;
     border-radius: 15px;
-    background: $lightGreen;
     padding: 0.5vw;
+    background: $lightGreen;
 }
 
 .innerCircle {
@@ -148,7 +148,6 @@ label.option {
 }
 
 // side section
-
 .sideSectionTitle {
     @include title;
 }
@@ -157,17 +156,20 @@ label.option {
     text-align: center;
 }
 
-// .dropBox {
-//     @include dropBox;
-// }
+.dropBox {
+    @include dropBox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-// .greyButton {
-//     @include greyButton;
-// }
+.greyButton {
+    @include greyButton;
+}
 
 .sideSection {
-    background-color: $lightGreyBackground;
     @include flexDisplay;
+    background-color: $lightGreyBackground;
     align-items: center;
 }
 
@@ -177,20 +179,20 @@ label.option {
     }
 
     .container {
-        margin: 12% 5%;
-        border-radius: 10px;
-        box-sizing: border-box;
+        @include gridDisplay;
         max-width: 90vw;
         height: 100vh;
-        @include gridDisplay;
+        box-sizing: border-box;
+        margin: 12% 5%;
+        border-radius: 10px;
         background-color: $greyLine;
     }
 
     .search {
         grid-row: 1;
         grid-column: 2 / 3;
-        background-color: $whiteBackground;
         border-radius: 0 10px 0 0;
+        background-color: $whiteBackground;
     }
 
     .lateralBar {
@@ -209,22 +211,21 @@ label.option {
         border-radius: 10px 0 0 0;
     }
 
-
     // lateral grey bar
     .logo {
         @include desktopLogo;
     }
 
     .notification {
-        margin-top: -10px;
+        float: right;
         width: 20px;
         height: 20px;
-        float: right;
+        margin-top: -10px;
     }
 
     .userIcon {
-        display: block;
         @include userIcon;
+        display: block;
     }
 
     .greenButton {
@@ -239,16 +240,18 @@ label.option {
         display: block;
     }
 
-    .menuLink, .communityLink {
+    .menuLink,
+    .communityLink {
         display: block;
-        text-decoration: none;
-        color: $lightGrey;
         border: 1px solid transparent;
         padding: 6px;
         border-radius: 25px;
+        text-decoration: none;
+        color: $lightGrey;
     }
 
-    .menuLink:hover, .communityLink:hover {
+    .menuLink:hover,
+    .communityLink:hover {
         background-color: $whiteBackground;
     }
 
@@ -287,8 +290,8 @@ label.option {
         width: 25px;
         height: 15px;
         border-radius: 15px;
-        background: $lightGreen;
         padding: 3px;
+        background: $lightGreen;
     }
 
     .innerCircle {
@@ -304,8 +307,14 @@ label.option {
     }
 
     // main section
+    .whiteButtons {
+        display: flex;
+        flex-direction: row;
+    }
     .whiteButton {
         @include desktopWhiteButton;
+        margin: 5px;
+
     }
 
     .foodItem {
@@ -321,16 +330,16 @@ label.option {
         display: inline-block;
         grid-row: 2;
         grid-column: 2;
-        background-color: $whiteBackground;
         width: 75%;
         border-bottom: none;
-        text-align: left;
         padding: 2vw;
+        background-color: $whiteBackground;
+        text-align: left;
     }
 
     .mainSectionTitle {
-        display: inline-block;
         @include desktopTitle;
+        display: inline-block;
         font-size: 2em;
     }
 
@@ -341,13 +350,24 @@ label.option {
     .sideSection {
         width: 25%;
         border-radius: 0 0 10px 0;
-        background-color: $whiteBackground;
         padding: 2vw;
+        background-color: $whiteBackground;
     }
 
     .sideSectionTitle {
         @include desktopTitle;
         font-size: 1.5em;
         font-weight: bold;
+    }
+
+    .dropBox {
+        @include desktopDropBox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .greyButton {
+        @include desktopGreyButton;
     }
 }
