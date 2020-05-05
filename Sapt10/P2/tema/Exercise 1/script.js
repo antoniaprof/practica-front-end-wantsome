@@ -4,19 +4,19 @@ request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
+let body = document.querySelector('body');
+let list = document.createElement('ul');
+body.appendChild(list);
 
 const drawSquares = (values) => {
-for (let i = 0; i < values.length; i++) {
-    let body = document.querySelector('body');
-    let list = document.createElement('ul');
+  for (let i = 0; i < values.length; i++) {
     let listItem = document.createElement('li');
-    body.appendChild(list);
     list.appendChild(listItem);
     let square = document.createElement('div');
     listItem.appendChild(square);
     square.setAttribute('class', 'square');
     square.style.backgroundColor = values[i];
-}
+  }
 }
 
 request.onload = () => {
