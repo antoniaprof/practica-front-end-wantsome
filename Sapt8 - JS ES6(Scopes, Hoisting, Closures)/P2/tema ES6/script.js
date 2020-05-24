@@ -6,16 +6,16 @@
 // 1. Implementati o functie care accepta ca parametru o valoare numerica si returneaza suma numerelor de la 1 pana la valoarea specificata
 const sum1 = number => {
     return number * (number - 1) / 2;
-}
+};
 console.log(sum1(56));
 
 const sum2 = number => {
     let result = 0;
     for (i = 0; i < number; i++) {
         result += i;
-    }
+    };
     return result;
-}
+};
 console.log(sum2(56));
 
 // 2. Implementati o functie care accepta ca parametru un string si returneaza cel mai lung cuvant din acel string.
@@ -25,17 +25,17 @@ const findLongestWord = string => {
     for (i = 0; i < stringToArray.length; i++) {
         if (stringToArray[i].length > longestWord.length) {
             longestWord = stringToArray[i];
-        }
-    }
+        };
+    };
     return longestWord;
-}
+};
 console.log(findLongestWord('longest word is thisssssss'));
 
 // 3. Implementati o functie care accepta ca parametru un string si ii face 'reverse'
 const reverseString = string => {
     let stringToArray = string.split('');
     return stringToArray.reverse().join('');
-}
+};
 console.log(reverseString('reverse a string'));
 
 // 4. Implementati o functie care accepta ca parametru un string si inlocuieste fiecare litera din acesta cu urmatoarea litera din alfabet
@@ -50,10 +50,10 @@ const replaceLetter = string => {
             string1 += String.fromCharCode(string.charCodeAt(i));
         } else {
             string1 += String.fromCharCode(string.charCodeAt(i) + 1);
-        }
-    }
+        };
+    };
     return string1;
-}
+};
 console.log(replaceLetter('abcdefghijklmn opqrstuvwxyz'));
 console.log(replaceLetter('ABCDEFGHIJKLMN OPQRSTUVWXYZ'));
 
@@ -63,14 +63,14 @@ const convertToTime = number => {
     let hours = Math.floor(number / 60);
     let minutes = number % 60;
     return `${hours}:${minutes}`;
-}
+};
 console.log(convertToTime(123));
 
 // 6. Implementati o functie care accepta ca parametru un string si returneaza string-ul cu toate literele ordonate alfabetic
 const alphabeticalOrder = string => {
     let stringToArray = string.split('');
     return stringToArray.sort().join('');
-}
+};
 console.log(alphabeticalOrder('alphabetical'));
 
 
@@ -84,8 +84,8 @@ const checkIfSum = string => {
             result = true;
         } else {
             result = false;
-        }
-    }
+        };
+    };
     return result;
-}
+};
 console.log(checkIfSum('+ab+c+'));
