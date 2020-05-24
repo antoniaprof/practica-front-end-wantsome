@@ -6,9 +6,9 @@
 //afiseaza mesaj de eroare
 
 function verifySex(CNP) {
-    if (CNP.charAt(0) == 1 || CNP.charAt(0) == 5) {
+    if (CNP.charAt(0) === '1' || CNP.charAt(0) === '5') {
         return 'Persoana verificata este de sexul M';
-    } else if (CNP.charAt(0) == 2 || CNP.charAt(0) == 6) {
+    } else if (CNP.charAt(0) === '2' || CNP.charAt(0) === '6') {
         return 'Persoana verificata este de sexul F';
     } else {
         return 'Eroare';
@@ -35,11 +35,11 @@ var grade = function (points) {
         letterGrade = 'E';
     } else if (points > 3 && points <= 6) {
         letterGrade = 'D';
-    } else if (points == 7 || points == 8) {
+    } else if (points === 7 || points === 8) {
         letterGrade = 'B';
-    } else if (points == 9) {
+    } else if (points === 9) {
         letterGrade = 'A';
-    } else if (points == 10) {
+    } else if (points === 10) {
         letterGrade = 'A+';
     };
     return 'Calificativul corespunzator punctajului ' + points + ' este ' + letterGrade;
@@ -51,17 +51,17 @@ console.log(grade(6));
 // daca tipul de masina nu e valid se afiseaza un mesaj de eroare
 var car = function (type) {
     var country;
-    if (type == 'Dacia') {
+    if (type === 'Dacia') {
         country = 'Romania';
-    } else if (type == 'Renault') {
+    } else if (type === 'Renault') {
         country = 'Finland';
-    } else if (type == 'Fiat') {
+    } else if (type === 'Fiat') {
         country = 'Poland';
-    } else if (type == 'Volvo') {
+    } else if (type === 'Volvo') {
         country = 'Sweden';
-    } else if (type == 'Chevrolet') {
+    } else if (type === 'Chevrolet') {
         country = 'USA';
-    } else if (type == 'Nissan') {
+    } else if (type === 'Nissan') {
         country = 'Japan';
     } else {
         return 'Unknown type!';
