@@ -94,8 +94,8 @@ let changeWordCase = string => {
             return word.toUpperCase();
         }
         return word;
-    })
-}
+    });
+};
 console.log(changeWordCase('hey ppl, lets learn javascript together'));
 
 // ex3
@@ -140,7 +140,7 @@ const square = number => number * number;
 const double = number => number * 2;
 const composedValue = (fn1, fn2, number) => {
     return fn1(fn2(number));
-}
+};
 console.log(composedValue(square, double, 5));
 
 //ex.2
@@ -162,6 +162,6 @@ console.log(compose(
 const isOdd = number => number % 2 === 1;
 const find = (array, condFn) => {
     return array.filter(elem => condFn(elem) === true);
-}
+};
 
 console.log(find([1, 2, 3, 4, 5], isOdd));
