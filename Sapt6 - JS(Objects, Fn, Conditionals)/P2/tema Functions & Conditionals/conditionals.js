@@ -12,8 +12,8 @@ function verifySex(CNP) {
         return 'Persoana verificata este de sexul F';
     } else {
         return 'Eroare';
-    }
-}
+    };
+};
 
 console.log(verifySex('2950812134145'));
 
@@ -30,21 +30,21 @@ console.log(verifySex('2950812134145'));
 
 
 var grade = function (points) {
-    var calificativ;
+    var letterGrade;
     if (points >= 1 && points <= 3) {
-        calificativ = 'E';
+        letterGrade = 'E';
     } else if (points > 3 && points <= 6) {
-        calificativ = 'D';
+        letterGrade = 'D';
     } else if (points == 7 || points == 8) {
-        calificativ = 'B';
+        letterGrade = 'B';
     } else if (points == 9) {
-        calificativ = 'A';
+        letterGrade = 'A';
     } else if (points == 10) {
-        calificativ = 'A+';
-    }
-    return 'Calificativul corespunzator punctajului ' + points + ' este ' + calificativ;
-}
-console.log(grade(8));
+        letterGrade = 'A+';
+    };
+    return 'Calificativul corespunzator punctajului ' + points + ' este ' + letterGrade;
+};
+console.log(grade(6));
 
 //se verifica tipul de masina 
 //se afiseaza tara corespunzatoare tipului de masina
@@ -58,15 +58,15 @@ var car = function (type) {
     } else if (type == 'Fiat') {
         country = 'Poland';
     } else if (type == 'Volvo') {
-        country = 'Sweden'
+        country = 'Sweden';
     } else if (type == 'Chevrolet') {
-        country = 'USA'
+        country = 'USA';
     } else if (type == 'Nissan') {
         country = 'Japan';
     } else {
-        return 'Unknown type!'
-    }
-    return 'Car ' + type + ' is made in ' + country + '.'
+        return 'Unknown type!';
+    };
+    return 'Car ' + type + ' is made in ' + country + '.';
 };
 console.log(car('Nissan'));
 
@@ -94,7 +94,7 @@ var car = function (type) {
             break;
         default:
             return 'Unknown type!';
-    }
+    };
     return 'Car ' + type + ' is made in ' + country + '.';
 
 };
@@ -113,5 +113,5 @@ var car = function (type) {
     };
 
     return 'Car ' + type + ' is made in ' + (carType[type] || carType['default']) + ".";
-}
+};
 console.log(car('Nissan'));
