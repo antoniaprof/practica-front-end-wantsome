@@ -4,9 +4,9 @@
 const myFunction = (number1, number2) => {
   if (number1 === number2) {
     return (number1 + number2) * 5;
-  }
+  };
   return number1 + number2;
-}
+};
 console.log(myFunction(2, 4));
 
 //Ex2
@@ -30,10 +30,9 @@ console.log(testFunction(20, 5));
 const checkString = text => {
   if (text.slice(0, 2) === 'JS') {
     return text;
-  }
-
+  };
   return `JS ${text}`;
-}
+};
 console.log(checkString('is awesome'));
 
 //Ex4
@@ -45,10 +44,10 @@ const removeDuplicates = param => {
   for (i = 0; i < param.length; i++) {
     if (noDuplicates.indexOf(param[i]) == -1) {
       noDuplicates += param[i];
-    }
-  }
+    };
+  };
   return noDuplicates;
-}
+};
 console.log(removeDuplicates('njnjlnnnnkklnuigyggggjvhvtuvgvghvgjnkkk'));
 
 //Ex5
@@ -61,10 +60,10 @@ const findLongestString = string => {
   for (i = 0; i < stringToArray.length; i++) {
     if (stringToArray[i].length > longestWord.length) {
       longestWord = stringToArray[i];
-    }
-  }
+    };
+  };
   return longestWord;
-}
+};
 console.log(findLongestString('Wantsomeeeeeeeeee is Awsomeeee today'));
 
 //Ex6
@@ -81,9 +80,9 @@ const hostFn = () => {
   const stars = () => {
     a += '*'
     return a;
-  }
+  };
   return stars;
-}
+};
 let fn = hostFn();
 console.log(fn());
 console.log(fn());
@@ -99,10 +98,10 @@ const extractNegativeNumbers = numbers => {
   for (i = 0; i < numbers.length; i++) {
     if (numbers[i] < 0) {
       negativeNumbers.push(numbers[i]);
-    }
-  }
+    };
+  };
   return negativeNumbers;
-}
+};
 console.log(extractNegativeNumbers([1, 2, -5, 4, -6, 0, -3, -5, -100]));
 
 //ex8
@@ -120,9 +119,9 @@ const calculate = (number1, number2, operation) => {
     result = number1 * number2;
   } else if (operation === 'divide') {
     result = number1 / number2;
-  }
+  };
   return result;
-}
+};
 console.log(calculate(10, 8, "substract"));
 console.log(calculate(2, 50, "multiply"));
 
@@ -138,10 +137,10 @@ const isDiv = number => {
   } else if (number % 3 === 0) {
     return 'three';
   } else if (number % 5 === 0) {
-    return 'five'
-  }
+    return 'five';
+  };
   return number;
-}
+};
 console.log(isDiv(9));
 
 //Master exercises
@@ -160,12 +159,12 @@ const printDate = () => {
   for (i = 0; i < days.length; i++) {
     if (day === i) {
       if (hour <= 12) {
-        return 'Today is : ' + days[i] + '.' + '\n' + 'The hour is : ' + hour + 'AM' + ':' + minute + ':' + second
-      }
-      return 'Today is : ' + days[i] + '.' + '\n' + 'The hour is : ' + hour + ' PM' + ':' + minute + ':' + second
-    }
-  }
-}
+        return 'Today is : ' + days[i] + '.' + '\n' + 'The hour is : ' + hour + 'AM' + ':' + minute + ':' + second;
+      };
+      return 'Today is : ' + days[i] + '.' + '\n' + 'The hour is : ' + hour + ' PM' + ':' + minute + ':' + second;
+    };
+  };
+};
 console.log(printDate());
 
 //ex10
@@ -177,25 +176,15 @@ console.log(printDate());
 const validPin = pin => {
   if (pin.length !== 4 && pin.length !== 6) {
     return false;
-  }
+  };
   for (i = 0; i < pin.length; i++) {
     if (pin.charCodeAt(i) < 48 || pin.charCodeAt(i) > 57) {
       return false;
-    }
-  }
+    };
+  };
   return true;
-}
+};
 console.log(validPin('1ffv78'));
-
-// const validPin = pin => {
-//   if (pin.length === 4 || pin.length === 6) {
-//     if (isNaN(pin)) {
-//       return false;
-//     }
-//     return true;
-//   }
-//   return false;
-// console.log(validPin('1356'));
 
 
 //ex11 
@@ -204,7 +193,7 @@ console.log(validPin('1ffv78'));
 
 const removeVowels = string => {
   return string.replace(/[a,e,i,o,u]/ig, '');
-}
+};
 console.log(removeVowels("Hey I am a developer"));
 
 //ex12
@@ -216,9 +205,9 @@ console.log(removeVowels("Hey I am a developer"));
 const isSquareNumber = number => {
   if (Math.sqrt(number) % 1 == 0) {
     return true;
-  }
+  };
   return false;
-}
+};
 console.log(isSquareNumber(25));
 
 //ex13
@@ -230,6 +219,6 @@ const isAnagram = (stringA, stringB) => {
   stringA = stringA.replace(/[' ']/g, '').toLowerCase();
   stringB = stringB.replace(/[' ']/g, '').toLowerCase();
   return stringA.split('').sort().join('') === stringB.split('').sort().join('');
-}
+};
 
 console.log(isAnagram("School master", "The class room"));
