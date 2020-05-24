@@ -1,5 +1,7 @@
 // Tema
 
+// Implementati o functie care face reverse la un string
+
 // scriem o functie named care accepta ca parametru un string
 // declaram o variabila reversedString goala in care vom depozita valoarea stringului reversed
 // declaram o variabila index cu valoarea lungimea stringului argument-1
@@ -16,6 +18,8 @@ function reverseAString(value) {
   return reversedString;
 };
 console.log(reverseAString('mirror'));
+
+// Implementati o functie care calculeaza factorialul unui numar
 
 // declaram o functie named care accepta ca parametru un nr
 // declaram o variabila factorial cu valoarea initiala 1
@@ -34,6 +38,8 @@ function factorialOperation(number) {
 };
 console.log(factorialOperation(7));
 
+// Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul se termina cu cel din urma
+
 // declaram o functie named care accepta ca parametru doua stringuri(string1, string2)
 // din string1 extragem de la ultima litera o lungime egala cu string2
 // comparam pe cele doua
@@ -46,7 +52,10 @@ function compareStringsEnd(string1, string2) {
   };
   return string1 + ' is not ending with ' + string2;
 };
-console.log(compareStringsEnd('vreau la mama', 'mama'))
+console.log(compareStringsEnd('vreau la mare', 'mare'));
+
+// Implementati o functie care accepta doua argumente: un array si o functie de adevar. Functia returneaza primul
+// element din array care trece testul specificat
 
 // scriem o functie named (conditionalFn) care accepta ca parametru un nr
 // daca restul impartirii argumentului la 2 este 0, functia va returna 'adevarat'
@@ -58,18 +67,19 @@ console.log(compareStringsEnd('vreau la mama', 'mama'))
 
 function conditionalFn(number) {
   return number % 2 === 0;
-}
+};
 
-function firstevenElement(array, conditionalFn) {
+function firstEvenElement(array, conditionalFn) {
   var i = 0;
   while (i < array.length && !conditionalFn(array[i])) {
     i++;
   };
   return array[i];
 };
-console.log(firstevenElement([5, 6, 10, 3], conditionalFn));
+console.log(firstEvenElement([5, 6, 10, 3], conditionalFn));
 
-
+// Implementati o functie care accepta ca argumente doi parametri: un array si o valoare. Functia afiseaza fiecare
+// element al array-ului pana cand intalneste elementul cu valoarea specificata
 
 // scriem  o functie named care accepta ca parametri un array si o valoare
 // declaram o variabila empty string (elements)
@@ -88,7 +98,10 @@ function printToElement(array, value) {
   };
   return elements;
 };
-console.log(printToElement([1, 2, 6, 7, 3], 3))
+console.log(printToElement([1, 2, 6, 7, 3, 90, 87, 3], 3));
+
+// Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul string contine toate literele
+// celui de-al doilea string
 
 // declaram o functie named care accepta ca parametri 2 stringuri
 // luam fiecare caracter din primul string si il comparam cu fiecare caracter din al doilea string :
@@ -112,21 +125,23 @@ function compare2Strings(string1, string2) {
   var i = 0;
   var included = true;
   while (i < string2.length && included) {
-    var j = 0
+    var j = 0;
     while (j < string1.length && (string2.charAt(i) !== string1.charAt(j))) {
       j++;
-    }
+    };
     if (j == string1.length) {
       included = false;
-    }
+    };
     i++;
   };
   if (included) {
-    return string2 + ' is included in ' + string1
+    return string2 + ' letters are included in ' + string1;
   };
-  return string2 + ' is not included in ' + string1
+  return string2 + ' letters are not included in ' + string1;
 };
-console.log(compare2Strings('nimic', 'mi'))
+console.log(compare2Strings('nimic', 'mi'));
+
+// Scrieti o functie care elimina toate valorile false dintr-un array: false, null, 0, "", undefined, NaN
 
 // scriem o functie named care accepta ca parametru un array
 // declaram o variabila index cu valoarea initiala 0
@@ -139,16 +154,15 @@ function removeFalse(array) {
   for (i = 0; i < array.length; i++) {
     if (!array[i]) {
       continue;
-    }
+    };
     result.push(array[i]);
-  }
+  };
   return result;
-}
+};
 
-console.log(
-  removeFalse([0, 1, '', NaN, 0 / 0, undefined, 2, 'ilinca', null, false])
-);
+console.log(removeFalse([0, 1, '', NaN, 0 / 0, undefined, 2, 'ilinca', null, false]));
 
+// Scrieti o functie care repeta un string de n ori specificate
 
 // scriem o functie care accepta ca parametru un string si un numar
 // declaram o variabila index cu valoarea 1
@@ -160,9 +174,9 @@ function repeatAString(string, number) {
   var finalString = '';
   var i = 1;
   while (i <= number) {
-    finalString += string; 
+    finalString += string;
     i++;
   };
   return finalString;
 };
-console.log(repeatAString('homework', 15))
+console.log(repeatAString('homework', 15));
