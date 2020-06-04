@@ -1,9 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 import Header from "./components/Header/Header";
-import List from './components/List';
+import List from './components/List/List';
 
 function App() {
   return (
@@ -11,8 +10,9 @@ function App() {
       <Header />
       <nav>tabs</nav>
       <main className='container'>
-        <List />
+      <List />
       </main>
+
       <footer>footer</footer>
     </div>
   );

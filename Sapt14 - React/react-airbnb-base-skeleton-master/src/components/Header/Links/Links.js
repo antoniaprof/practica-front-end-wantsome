@@ -1,29 +1,29 @@
 import React from "react";
 
-import styles from "./Links.module.css";
+import styles from "./Links.module.scss";
 
 const links = [
   {
     id: 1,
-    name: "Link 1",
+    name: "Become a host",
     path: "www.google.ro",
     className: 'linkText'
   },
   {
     id: 2,
-    name: "Link 2",
+    name: "Help",
     path: "www.google.ro",
     className: 'linkText'
   },
   {
     id: 3,
-    name: "Link 3",
+    name: "Sign up",
     path: "www.google.ro",
     className: 'linkText'
   },
   {
     id: 4,
-    name: "Link 4",
+    name: "Log in",
     path: "www.google.ro",
     className: 'linkText'
   },
