@@ -3,17 +3,18 @@ import "./App.css";
 
 import Header from "./components/Header/Header";
 import List from './components/List/List';
+import Tabs from './components/Tabs/Tabs';
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <div>
       <Header />
-      <nav>tabs</nav>
+      <Tabs />
       <main className='container'>
       <List />
       </main>
-
-      <footer>footer</footer>
+      <Footer />
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import React from "react";
 
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 
 import Links from "./Links/Links";
 import Search from "./Search/Search";
+
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
         <img
           className={styles.logo}
           src="https://helios-apartments.com/wp-content/uploads/2019/01/airbnb-2-png-transparent-logo-1.png"
-          alt=""
+          alt="logo"
         />
 
         <Search />

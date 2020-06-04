@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './List.module.scss';
+import Card from './Card/Card'
 
 const apartaments = [
     {
@@ -72,19 +73,20 @@ const apartaments = [
 const List = () => {
     return (
         <section className={styles.list}>
-            <h1>HOMES AROUND THE WORLD</h1>
+            <h1 className={styles.text}>HOMES AROUND THE WORLD</h1>
             {apartaments.map(apartament => (
-                <div className={styles.card}>
-                    <img src={apartament.image} className={styles.image} />
-                    <div className={styles.type}>{apartament.type}</div>
-                    <div className={styles.city}>{apartament.city}</div>
-                    <div className={styles.name}>{apartament.name}</div>
-                    <div className={styles.rating}>{apartament.rating}</div>
-                    <div className={styles.host}>{apartament.host}</div>
-                </div>
+                <Card className={styles.card}
+                    image={apartament.image}
+                    type={apartament.type}
+                    city={apartament.city}
+                    name={apartament.name}
+                    rating={apartament.rating}
+                    host={apartament.host} />
+
             ))}
         </section>
     );
 };
 
+// destructure Card
 export default List;

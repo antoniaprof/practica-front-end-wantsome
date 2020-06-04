@@ -1,8 +1,6 @@
 .container {
-    padding: 50px;
-    border: 2px solid green;
+    padding: 0 100px;
 }
-
 .black {
     color: black;
 }
