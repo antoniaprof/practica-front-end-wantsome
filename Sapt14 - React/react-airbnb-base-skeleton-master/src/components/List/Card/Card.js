@@ -12,7 +12,8 @@ const Card = (props) => {
             <div className={styles.rating}>{props.rating}</div>
             <div className={styles.host}>{props.host}</div> 
         </div>
-    )
-}
+    );
+};
 
 export default Card;
+
